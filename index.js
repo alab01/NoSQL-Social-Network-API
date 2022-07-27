@@ -12,6 +12,8 @@ const app = express();
 //   ? cwd.split('/01-Activities/')[1]
 //   : cwd;
 
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
