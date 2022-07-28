@@ -6,5 +6,6 @@
 
 #### ![alan-NoSQL Img] (assets/img/NoSQL-Social-Network-API.png)
 
-##### [Recorded Video link]: 
+##### [Recorded Video link]: https://drive.google.com/file/d/1DRLyaxS8WbIfFolm_DXEaFmxPDH_ISS4/view
+
 
