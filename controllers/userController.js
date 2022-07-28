@@ -70,17 +70,18 @@ module.exports = {
 
   //Delete friend 
   deleteFriend(req, res) {
-    Users.findOneAndDelete(
+    Users.findOneAndUpdate(
       { _id: req.params.userId },
       { $pull: { friends: req.params.friendId }},
       { runValidators: true, new: true }
     )
-      .then((user) =>
-        !friend
-          ? res.status(404).json({ message: 'No friend with that ID' })
-          : Student.deleteMany({ _id: { $in: user.friend} })
-      )
-      .then(() => res.json({ message: 'Friend deleted!' }))
+      .then((user) => {
+        if (!user) {
+          res.status(404).json({ message: 'No user with that ID' })
+        }
+        res.json(user)
+          
+      })
       .catch((err) => res.status(500).json(err));
   },
 
