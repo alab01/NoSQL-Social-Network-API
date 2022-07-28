@@ -33,6 +33,12 @@ const userSchema = new Schema(
                 ref: 'Users',
             },
         ],
+    },
+    {
+        toJSON: {
+            getters: true
+        },
+        id: false
     }
 )
 
